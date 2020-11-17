@@ -1,0 +1,15 @@
+#account {
+  height: 400px;
+  width: 100%;
+  background-color: #e6c700;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#account img {
+  display: flex;
+  align-items: center;
+}
