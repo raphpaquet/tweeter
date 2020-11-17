@@ -35,3 +35,18 @@ app.use("/tweets", tweetsRoutes);
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
+
+
+
+
+/// STOP THE FORM
+/// const form = document.querySelector('form.story')
+/* for.addEventListener('submit', event => {
+console.log(event)
+event.preventDefault()
+})
+
+$('form.story').on('submit', event => {
+  $(event.target).find('li').val()
+})
+*/
