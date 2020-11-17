@@ -1,0 +1,21 @@
+textarea {
+  background: transparent;
+  border:none;
+  border-bottom: 3px solid black;
+  font-weight: bold;
+  height: 30px;
+  width: 100%;
+  margin-top:1em;
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: #4056A1;
+  font-family: 'bungee', cursive, sans-serif;
+  color: #FFFFFFFF;
+}
+
+output {
+  font-family: 'bungee', cursive, sans-serif;
+  float: right;
+}
