@@ -1,15 +1,16 @@
-#account {
-  height: 400px;
-  width: 100%;
+.account {
+  align-items: center;
   background-color: #e6c700;
   background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  height: 400px;
+  margin-top:120px;
+  width: 100%;
 }
 
-#account img {
-  display: flex;
+.account img {
   align-items: center;
+  display: flex;
 }
