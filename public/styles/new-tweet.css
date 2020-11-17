@@ -1,3 +1,4 @@
+
 textarea {
   background: transparent;
   border:none;
@@ -9,6 +10,14 @@ textarea {
   margin-bottom: 1em;
 }
 
+#tweet-text {
+  padding-bottom: 20px; 
+  margin: 24px 0px; 
+  height: 50px; 
+  width: 100%;
+  font-weight: lighter;
+}
+
 button {
   background-color: #4056A1;
   font-family: 'bungee', cursive, sans-serif;
@@ -18,4 +27,75 @@ button {
 output {
   font-family: 'bungee', cursive, sans-serif;
   float: right;
+}
+
+.red {
+  color: red
+}
+
+#tweet-container {
+  margin: 50px 0px 30px 0px;
+  border:solid black;
+    /* border-top: solid black;
+    border-bottom: solid black;
+    border-left: solid black;
+    border-right: solid black; */
+  display: flex;
+}
+
+#tweet-container header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.tweet {
+  width: 100%;
+}
+
+#tweet-container:hover {
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+#tweet-container header img {
+ margin-top: 20px 0px 0px 10px;
+}
+
+#tweet-container header h2 {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 30px;
+  margin-left: 0px
+}
+
+#tweet-container header h3 {
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+  font-weight: lighter;
+}
+
+.tweet > p {
+    border-bottom: solid black;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+}
+
+#tweet-container footer {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+#tweet-container footer p {
+  font-size: 14px;
+  margin-left: 30px;
+  margin-right: 30px
+}
+
+#tweet-container footer img {
+  margin-right: 20px;
 }
