@@ -39,14 +39,3 @@ app.listen(PORT, () => {
 
 
 
-/// STOP THE FORM
-/// const form = document.querySelector('form.story')
-/* for.addEventListener('submit', event => {
-console.log(event)
-event.preventDefault()
-})
-
-$('form.story').on('submit', event => {
-  $(event.target).find('li').val()
-})
-*/
