@@ -18,12 +18,15 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   background-color: #f4f1ec;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   font-size: 24px;
 }
+
 
 main {
   width: 90%;
   background-color:#f4f1ec;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   margin: auto
 }
 
