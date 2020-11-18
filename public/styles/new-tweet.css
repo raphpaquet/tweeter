@@ -1,101 +1,87 @@
-
-textarea {
+#tweet-text {
   background: transparent;
   border:none;
   border-bottom: 3px solid black;
-  font-weight: bold;
-  height: 30px;
-  width: 100%;
-  margin-top:1em;
-  margin-bottom: 1em;
-}
-
-#tweet-text {
-  padding-bottom: 20px; 
-  margin: 24px 0px; 
-  height: 50px; 
-  width: 100%;
   font-weight: lighter;
+  height: 50px; 
+  margin: 24px 0px; 
+  outline:none;
+  overflow: auto;
+  padding-bottom: 20px; 
+  resize: none;
+  width: 100%;
 }
 
 button {
   background-color: #4056A1;
-  font-family: 'bungee', cursive, sans-serif;
   color: #FFFFFFFF;
+  font-family: 'bungee', cursive, sans-serif;
 }
 
 output {
-  font-family: 'bungee', cursive, sans-serif;
   float: right;
+  font-family: 'bungee', cursive, sans-serif;
 }
 
 .red {
   color: red
 }
 
-#tweet-container {
-  margin: 50px 0px 30px 0px;
+.tweet {
   border:solid black;
-    /* border-top: solid black;
-    border-bottom: solid black;
-    border-left: solid black;
-    border-right: solid black; */
   display: flex;
+  margin: 50px 0px 30px 0px;
+  width: 100%;
+  flex-direction: column;
 }
 
-#tweet-container header {
+.tweet header {
   display: flex;
   justify-content: space-between;
 }
 
-
-.tweet {
-  width: 100%;
-}
-
-#tweet-container:hover {
+.tweet:hover {
   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 }
 
-#tweet-container header img {
- margin-top: 20px 0px 0px 10px;
+.tweet header img {
+ margin: 30px 10px 0px 30px;
 }
 
-#tweet-container header h2 {
+.tweet header h2 {
   display: flex;
   flex-grow: 1;
   margin-top: 30px;
-  margin-left: 0px
 }
 
-#tweet-container header h3 {
-  float: right;
-  margin-top: 30px;
-  margin-right: 30px;
+.tweet header h3 {
   font-weight: lighter;
+  float: right;
+  margin: 30px 30px 0px 0px;
+  opacity: 0.6;
 }
 
 .tweet > p {
     border-bottom: solid black;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    margin-bottom: 0px;
+    margin: 30px 10px 0px 30px;
+    padding: 0px 0px 20px 20px;
 }
 
-#tweet-container footer {
+.tweet footer {
   display: flex;
   flex-direction:row;
   justify-content: space-between;
 }
 
-#tweet-container footer p {
+.tweet footer span {
   font-size: 14px;
-  margin-left: 30px;
-  margin-right: 30px
+  margin: 30px 30px 30px 30px;
 }
 
-#tweet-container footer img {
-  margin-right: 20px;
+.tweet footer div {
+margin: 20px 30px 0px 0px
+}
+
+.tweet footer img {
+  margin: 10px 10px 0px 0px
 }
