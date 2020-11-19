@@ -45,31 +45,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
     <section class="new-tweet">
+      <div class="error-msg"></div>
       <form method="POST" action="/tweets">
-        <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
       </form>
     </section>
     <section id="tweet-container">
-      <article class="tweet">
-        <header>
-          <img src="https://i.imgur.com/nlhLi3I.png" alt="avatar" style="width:40px;height:40px;">
-          <h2>Guacamole</h2>
-          <h3>@avocado</h3>
-        </header>
-        <p>personnal tweet</p>
-        <footer>
-          <span>
-            since last post
-          </span>
-          <div>
-            <img src="/images/repost.png" alt="repost" style="width:20px;height:20px;">
-            <img src="/images/heart.png" alt="heart" style="width:20px;height:20px;">
-            <img src="/images/little-flag.svg" alt="heart" style="width:20px;height:20px;">
-          </div>
-        </footer>
-      </article>
     </section>
     </main>
   </body>
