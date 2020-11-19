@@ -1,3 +1,9 @@
+.error-msg {
+  color: #D8000C;
+  font-weight: 200;
+}
+
+
 #tweet-text {
   background: transparent;
   border:none;
@@ -34,6 +40,8 @@ output {
   width: 100%;
   flex-direction: column;
 }
+
+
 
 .tweet header {
   display: flex;
