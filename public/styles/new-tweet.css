@@ -1,6 +1,24 @@
+
 .error-msg {
+  visibility: hidden;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+  padding: 10px;
+
+}
+
+.m-fadeIn {
   color: #D8000C;
-  font-weight: 200;
+  background-color: #FFD2D2;
+  border-radius:.25em;
+  visibility: visible;
+  margin-top: 20px;
+  opacity: 1;
+  /* transition: visibility 3s linear 0s, opacity 700ms; */
+}
+
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
 }
 
 
@@ -65,14 +83,16 @@ output {
 .tweet header h3 {
   font-weight: lighter;
   float: right;
-  margin: 30px 30px 0px 0px;
+  margin: 30px 30px 30px 30px;
   opacity: 0.6;
 }
 
 .tweet > p {
     border-bottom: solid black;
-    margin: 30px 10px 0px 30px;
-    padding: 0px 0px 20px 20px;
+    margin: 30px 30px 0px 30px;
+    padding: 0px 20px 20px 20px;
+    text-overflow: auto;
+    word-wrap: break-word;
 }
 
 .tweet footer {
@@ -87,7 +107,7 @@ output {
 }
 
 .tweet footer div {
-margin: 20px 30px 0px 0px
+margin: 30px 30px 30px 30px
 }
 
 .tweet footer img {

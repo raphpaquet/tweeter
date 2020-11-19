@@ -39,22 +39,27 @@ $(document).ready(function() {
         <img src="/images/heart.png" alt="heart" style="width:20px;height:20px;">
         <img src="/images/little-flag.svg" alt="heart" style="width:20px;height:20px;">
       </div>
-    </footer>
-  </article>`
-    return $tweet;
-  }
-  
+      </footer>
+      </article>`
+      return $tweet;
+    }
+    
+    const showError = (text) => {
+      const errorClass = $('.error-msg')
+     errorClass.slideDown().text(text).addClass('m-fadeIn');
+        window.setTimeout(() => {
+          errorClass.addClass('m-fadeOut')
+        }, 3000)
+    }
   
   //form sumbission
   $('form').on('submit', event => {
     event.preventDefault();
     
     if (!$('#tweet-text').val()) {
-      $('.error-msg').slideDown();
-      $('.error-msg').text('Your tweet is empty!')
+     showError('Whooops ! Your tweet is empty!');
     } else if ($('#tweet-text').val().length > 140) {
-      $('.error-msg').slideDown();
-      $('.error-msg').text('Your tweet is over character capacity');
+      showError('Whooops! Your tweet has too many characters !');
     } else {
       $.ajax({
         url:"/tweets",
@@ -80,6 +85,8 @@ $(document).ready(function() {
       renderTweets(res)
     });
   };
+
+
 
 })
 
