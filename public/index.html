@@ -27,9 +27,11 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <span class="header" style="font-family: bungee, sans-serif">tweeter</span>
-      <div>
-      <span class="new-tweet">Write a new Tweet</span>
+      <div class="logo"></div><img src="/images/duck.png" style="width:50px;height:50px">
+        <span class="header" style="font-family: bungee, sans-serif">tweeter</span>
+      </div>
+      <div class="write-msg">
+        <button class="new-tweet"><strong>Write</strong>a new Tweet</button>
       </div>
     </nav>
 
@@ -39,7 +41,7 @@
       </div>
       <br>
       <div>
-          <h2>Rapha</h2>
+          <h2 style="font-family: Bungee, sans-serif">Rapha</h2>
       </div>
   </header>
 
@@ -50,7 +52,15 @@
       <form method="POST" action="/tweets">
           <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
           <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output id="text-counter" name="counter" class="counter" for="tweet-text">140</output>
+          <div id="error-no-text" class="hidden">
+            <span class="close-button error">&times;</span>
+            <span>Whooops! Tweet is empty !</span>
+          </div>
+          <div id="error-over" class="hidden">
+            <span class="close-button error">&times;</span>
+            <span>Whooops! Your tweet have too many characters !</span>
+          </div>
       </form>
     </section>
     <section id="tweet-container">
