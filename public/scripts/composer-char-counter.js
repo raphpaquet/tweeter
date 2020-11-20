@@ -1,16 +1,15 @@
 $(document).ready(function() {
 
 
-  $('#tweet-text').keyup(function() {
+  $('#tweet-text').on('keyup keydown', function() {
     let max = 140;
-    let length = max - ($(this).val().length);
-    let tweet = $(this).parent().find("output.counter")
-    tweet.text(length)
+    let text = $(this).val();
+    let length = max - text.length
 
     if (length <= 0) {
-      tweet.addClass('red')
+      $("#text-counter").html(length).css("color", "red")
     } else {
-      tweet.removeClass('red')
+      $("#text-counter").html(length).css("color", "")
     };
   })
 });
