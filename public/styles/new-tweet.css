@@ -1,26 +1,27 @@
-
-.error-msg {
-  visibility: hidden;
-  transition: visibility 0s linear 300ms, opacity 300ms;
-  padding: 10px;
-
-}
-
-.m-fadeIn {
+.close-button {
   color: #D8000C;
   background-color: #FFD2D2;
   border-radius:.25em;
-  visibility: visible;
-  margin-top: 20px;
-  opacity: 1;
-  /* transition: visibility 3s linear 0s, opacity 700ms; */
+  margin: 20px
 }
 
-.m-fadeOut {
-  visibility: hidden;
-  opacity: 0;
+#error-no-text {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border-radius:.25em;
+  margin: 20px;
 }
 
+#error-over {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border-radius:.25em;
+  margin: 20px
+}
+
+.hidden {
+  display:none;
+}
 
 #tweet-text {
   background: transparent;
@@ -36,10 +37,12 @@
   width: 100%;
 }
 
-button {
-  background-color: #4056A1;
+.new-tweet button {
   color: #FFFFFFFF;
+  background-color: #4056A1;
+  border-radius: 25px;
   font-family: 'bungee', cursive, sans-serif;
+  outline:none;
 }
 
 output {
@@ -58,8 +61,6 @@ output {
   width: 100%;
   flex-direction: column;
 }
-
-
 
 .tweet header {
   display: flex;
@@ -112,4 +113,29 @@ margin: 30px 30px 30px 30px
 
 .tweet footer img {
   margin: 10px 10px 0px 0px
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 60%;
+  }
+
+  .new-tweet {
+    margin: 0px 10px 50px 10px;
+  }
+
+  #tweet-container {
+    margin: 20px 80px 50px 10px;
+  }
+
+  #tweet-text {
+    margin-top:200px
+  }
+
 }

@@ -1,14 +1,30 @@
 #nav-bar{
-  background-color: #4056A1;
-  color: #FFFFFFFF;
+  color: firebrick;
   display: flex;
   height: 120px;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1.5em ;
   position: fixed;
   top:0;
   width: 100%;
 };
+
+#nav-bar .logo {
+  flex-grow:1;
+  
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+  #nav-bar {
+    background-color: #4056A1;
+    color: #FFFFFFFF;
+    position:fixed
+  }
+}
+
 
 
 
