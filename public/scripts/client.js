@@ -1,8 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
 $(document).ready(function() {
   
@@ -44,50 +39,54 @@ $(document).ready(function() {
       return $tweet;
     }
     
-    const showError = (text) => {
-      const errorClass = $('.error-msg')
-     errorClass.slideDown().text(text).addClass('m-fadeIn');
-        window.setTimeout(() => {
-          errorClass.addClass('m-fadeOut')
-        }, 3000)
-    }
+    //load tweet on the page 
+    const loadTweets = () => {
+      $
+      .ajax({
+        url: "/tweets",
+        method: "GET"
+      })
+      .then(function(res) {
+        renderTweets(res)
+      });
+    };
+    loadTweets();
+
+
   
-  //form sumbission
+  // Tweet verification and submission 
   $('form').on('submit', event => {
     event.preventDefault();
-    
-    if (!$('#tweet-text').val()) {
-     showError('Whooops ! Your tweet is empty!');
-    } else if ($('#tweet-text').val().length > 140) {
-      showError('Whooops! Your tweet has too many characters !');
+    let text = $('#tweet-text').val()
+
+    if (text.length === 0) {
+      $("#error-no-text").slideDown();
+      $(".close-button").click(function() {
+        $("#error-no-text").slideUp();
+        return;
+      })
+    } else if (text.length > 140) {
+      $("#error-over").slideDown();
+      $(".close-button").click(function() {
+        $("#error-over").slideUp();
+        return;
+      })
     } else {
-      $.ajax({
+      $
+      .ajax({
         url:"/tweets",
         method:"POST",
         data: $('form').serialize(),
       })
       .then(function() {
-        $('#tweet-container').empty()
-        loadTweets()
+        $('#tweet-container').empty();
+        $('#tweet-text').val("");
+        $('#text-counter').val(140);
+        loadTweets();
       })
       .catch((err) => console.log(err));
     }
-  })
- 
-  
-  //load tweet on the page without refreshing 
-  const loadTweets = () => {
-    $.ajax({
-      url: "/tweets",
-      method: "GET"
-    })
-    .then(function(res) {
-      renderTweets(res)
-    });
-  };
-
-
-
+  }) 
 })
 
 
