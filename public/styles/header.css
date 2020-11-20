@@ -11,33 +11,14 @@
 
 .account img {
   align-items: center;
-  display: flex;
-  margin-top: 70px;
+  display: flex; 
 }
 
 .account h2 {
   margin: 10px;
 }
 
-#nav-bar .header {
-  display:flex;
-  flex-grow:1;
-  margin: 10px 0px 0px 20px;
-}
 
-#nav-bar .write-msg strong {
-margin-right: 5px;
-}
-
-#nav-bar .write-msg .new-tweet {
-  background-color: transparent;
-  color: firebrick;
-  background-color: transparent;
-  border: none;
-  flex-grow:1;
-  display:flex;
-  outline: none;
-}
 
 
 @media only screen and (min-width: 1024px) {
@@ -50,7 +31,7 @@ margin-right: 5px;
   #nav-bar {
     background-color: #4056A1;
     color: #FFFFFFFF;
-    position:fixed
+    position:fixed;
   }
 
   #nav-bar .write-msg .new-tweet {

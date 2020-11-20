@@ -27,16 +27,15 @@ main {
   width: 90%;
   background-color:#f4f1ec;
   background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-  margin: auto
+  margin: auto;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+
  @media only screen and (min-width: 1024px) {
-  
   
   body {
     display: flex;

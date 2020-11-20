@@ -1,13 +1,14 @@
 
 $(document).ready(function() {
   
+  // function to prevent XSS attack (compass)
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
 
-  // array with all the tweet - generate tweet HTML
+  // get array with all the tweets - generate tweet HTML
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const newTweet = createTweetElement(tweet)
@@ -15,31 +16,33 @@ $(document).ready(function() {
     }
   };
   
-  // return HTML for rendering the tweet
+  // Create the tweet in it HTML format
   const createTweetElement = function(tweet) {
+    const dateOfTweet = moment(tweet.create_at).fromNow();
+  
     let $tweet = `
     <article class="tweet">
-    <header>
-      <img src=${tweet.user.avatars} alt="avatar" style="width:40px;height:40px;">
-      <h2>${tweet.user.name}</h2>
-      <h3>${tweet.user.handle}</h3>
-    </header>
-    <p>${escape(tweet.content.text)}</p>
-    <footer>
-      <span>
-        ${tweet.created_at}
-      </span>
-      <div>
-        <img src="/images/repost.png" alt="repost" style="width:20px;height:20px;">
-        <img src="/images/heart.png" alt="heart" style="width:20px;height:20px;">
-        <img src="/images/little-flag.svg" alt="heart" style="width:20px;height:20px;">
-      </div>
+      <header>
+        <img src=${tweet.user.avatars} alt="avatar" style="width:40px;height:40px;">
+        <h2>${tweet.user.name}</h2>
+        <h3>${tweet.user.handle}</h3>
+      </header>
+        <p>${escape(tweet.content.text)}</p>
+      <footer>
+        <span>
+          ${dateOfTweet}
+        </span>
+        <div>
+          <img src="/images/repost.png" alt="repost" style="width:20px;height:20px;">
+          <img src="/images/heart.png" alt="heart" style="width:20px;height:20px;">
+          <img src="/images/little-flag.svg" alt="heart" style="width:20px;height:20px;">
+        </div>
       </footer>
-      </article>`
+    </article>`
       return $tweet;
     }
     
-    //load tweet on the page 
+    // Add tweet to the HTML page 
     const loadTweets = () => {
       $
       .ajax({
@@ -71,6 +74,7 @@ $(document).ready(function() {
         $("#error-over").slideUp();
         return;
       })
+      // all good verified tweets are submitted
     } else {
       $
       .ajax({

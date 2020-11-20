@@ -1,19 +1,63 @@
 #nav-bar{
-  color: firebrick;
+  background-color: #e6c700;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  color: white;
   display: flex;
   height: 120px;
   justify-content: flex-start;
   padding: 1.5em ;
-  position: fixed;
   top:0;
   width: 100%;
 };
 
 #nav-bar .logo {
   flex-grow:1;
-  
+  position:fixed;
 }
 
+#nav-bar .header {
+  display:flex;
+  flex-grow:1;
+  margin: 10px 0px 0px 20px;
+}
+
+#nav-bar .write-msg strong {
+margin-right: 5px;
+}
+
+#nav-bar .write-msg .new-tweet {
+  background-color: transparent;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  flex-grow:1;
+  display:flex;
+  margin-bottom:15px;
+  outline: none;
+}
+
+.arrow {
+  text-align: center;
+  margin: 10px;
+}
+
+.bounce {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 
 
 @media only screen and (min-width: 1024px) {
@@ -21,7 +65,11 @@
   #nav-bar {
     background-color: #4056A1;
     color: #FFFFFFFF;
-    position:fixed
+    position:fixed;
+  }
+
+  .arrow {
+    text-align: center;
   }
 }
 

@@ -18,6 +18,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -31,10 +32,12 @@
         <span class="header" style="font-family: bungee, sans-serif">tweeter</span>
       </div>
       <div class="write-msg">
-        <button class="new-tweet"><strong>Write</strong>a new Tweet</button>
+        <button class="new-tweet" type="submit"><strong>Write</strong>a new Tweet</button>
+        <div class="arrow bounce">
+          <a class="fas fa-angle-double-down"></a>
+        </div>
       </div>
     </nav>
-
     <header class="account">
       <div>
           <img src="/images/profile-hex.png"> 
