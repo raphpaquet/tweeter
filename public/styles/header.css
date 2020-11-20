@@ -6,11 +6,55 @@
   flex-direction: column;
   justify-content: center;
   height: 400px;
-  margin-top:120px;
   width: 100%;
 }
 
 .account img {
   align-items: center;
   display: flex;
+  margin-top: 70px;
+}
+
+.account h2 {
+  margin: 10px;
+}
+
+#nav-bar .header {
+  display:flex;
+  flex-grow:1;
+  margin: 10px 0px 0px 20px;
+}
+
+#nav-bar .write-msg strong {
+margin-right: 5px;
+}
+
+#nav-bar .write-msg .new-tweet {
+  background-color: transparent;
+  color: firebrick;
+  background-color: transparent;
+  border: none;
+  flex-grow:1;
+  display:flex;
+  outline: none;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  
+  .account {
+    width: 40%;
+    margin: 150px 40px 40px 40px;
+  }
+
+  #nav-bar {
+    background-color: #4056A1;
+    color: #FFFFFFFF;
+    position:fixed
+  }
+
+  #nav-bar .write-msg .new-tweet {
+    color: #FFFFFFFF;
+    margin-top: 10px;
+  }
 }
